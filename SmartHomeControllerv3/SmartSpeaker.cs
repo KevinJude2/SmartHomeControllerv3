@@ -32,5 +32,12 @@ namespace SmartHomeController
 
         }
 
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("This is a smart security camera");
+            Console.WriteLine($"Volume: {volume}");
+        }
+
     }
 }

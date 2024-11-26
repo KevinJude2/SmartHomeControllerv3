@@ -15,15 +15,15 @@ namespace SmartHomeController
 
         // Public properties
         public double CurrentTemperature
-        { 
-            get { return currentTemperature; } 
-            set { currentTemperature = value; } 
+        {
+            get { return currentTemperature; }
+            set { currentTemperature = value; }
         }
 
         public double TargetTemperature
-            { 
-            get { return targetTemperature; } 
-            set { targetTemperature = value; } 
+        {
+            get { return targetTemperature; }
+            set { targetTemperature = value; }
         }
 
         // Constructor
@@ -32,6 +32,14 @@ namespace SmartHomeController
             this.CurrentTemperature = thermostatCurrentTemperature;
             this.TargetTemperature = thermostatTargetTemperature;
 
+        }
+
+
+        public override void GetStatus()
+        {
+            base.GetStatus();
+            Console.WriteLine("This is a smart security camera");
+            Console.WriteLine($"Current Temperautre: {CurrentTemperature}");
         }
     }
 }
